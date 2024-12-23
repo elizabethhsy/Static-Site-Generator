@@ -1,0 +1,27 @@
+{
+  "name": "static-site-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Static Site Generator",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "serve": "node dist/app.js \"$npm_config_target\" temp && browser-sync start -s 'temp' --files 'temp'",
+    "test": "browser-sync start -s 'example/example_out' --files 'example/example_out'",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "browser-sync": "^3.0.3",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/showdown": "^2.0.6",
+    "minimist": "^1.2.8",
+    "showdown": "^2.1.0"
+  }
+}
